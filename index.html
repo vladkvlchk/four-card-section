@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Four card feature section</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+      * {
+        --color-primary-red: hsl(0, 78%, 62%);
+        --color-primary-cyan: hsl(180, 62%, 55%);
+        --color-primary-orange: hsl(34, 97%, 64%);
+        --color-primary-blue: hsl(212, 86%, 64%);
+
+        --color-very-dark-blue: hsl(234, 12%, 34%);
+        --color-grayish-blue: hsl(229, 6%, 66%);
+        --color-very-light-gray: hsl(0, 0%, 98%);
+        --color-white: hsl(0, 0%, 100%);
+      }
+
+      body {
+        font-family: "Poppins";
+        font-size: 15px;
+        color: var(--color-very-dark-blue);
+        background-color: var(--color-very-light-gray);
+        margin: 0;
+      }
+
+      h1 {
+        font-weight: 200;
+        font-size: 36px;
+        margin: 0;
+      }
+
+      h2 {
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0;
+      }
+
+      p {
+        color: var(--color-grayish-blue);
+        font-weight: 400;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .bold-h1 {
+        font-weight: 600;
+      }
+
+      .card-section {
+        text-align: center;
+        margin-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card-section__description {
+        max-width: 500px;
+      }
+
+      .card-section__card-list {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        margin: 20px 0 50px 0;
+      }
+
+      .card-section__card-item {
+        background-color: var(--color-white);
+        width: 350px;
+        height: 250px;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: left;
+        margin: 30px 15px;
+        -webkit-box-shadow: 0px 15px 36px -23px rgba(140, 156, 219, 1);
+        -moz-box-shadow: 0px 15px 36px -23px rgba(140, 156, 219, 1);
+        box-shadow: 0px 15px 36px -23px rgba(140, 156, 219, 1);
+      }
+
+      .card-section__card-item .line {
+        width: 100%;
+        height: 4px;
+      }
+
+      .card-section__card-item.red .line {
+        background-color: var(--color-primary-red);
+      }
+
+      .card-section__card-item.blue .line {
+        background-color: var(--color-primary-blue);
+      }
+
+      .card-section__card-item.cyan .line {
+        background-color: var(--color-primary-cyan);
+      }
+
+      .card-section__card-item.orange .line {
+        background-color: var(--color-primary-orange);
+      }
+
+      .card-section__card-item__content {
+        padding: 28px 32px;
+      }
+
+      .card-section__card-item__description {
+        font-size: 13.5px;
+        font-weight: 200;
+        line-height: 25px;
+        margin-top: 6px;
+      }
+
+      .card-section__card-item__icon {
+        float: right;
+        margin-top: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="card-section">
+      <h1>
+        Reliable, efficient delivery
+        <br />
+        <b class="bold-h1"> Powered by Technology </b>
+      </h1>
+      <p class="card-section__description">
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+      <ul class="card-section__card-list">
+        <li class="card-section__card-item cyan">
+          <div class="line"></div>
+          <div class="card-section__card-item__content">
+            <h2>Supervisor</h2>
+            <p class="card-section__card-item__description">
+              Monitors activity to identify project roadblocks
+            </p>
+            <img
+              class="card-section__card-item__icon"
+              src="./images/icon-supervisor.svg"
+              alt="supervisor icon"
+            />
+          </div>
+        </li>
+        <span>
+          <li class="card-section__card-item red">
+            <div class="line"></div>
+            <div class="card-section__card-item__content">
+              <h2>Team Builder</h2>
+              <p class="card-section__card-item__description">
+                Scans our talent network to create the optimal team for your
+                project
+              </p>
+              <img
+                class="card-section__card-item__icon"
+                src="./images/icon-team-builder.svg"
+                alt="team builder icon"
+              />
+            </div>
+          </li>
+          <li class="card-section__card-item orange">
+            <div class="line"></div>
+            <div class="card-section__card-item__content">
+              <h2>Karma</h2>
+              <p class="card-section__card-item__description">
+                Regularly evaluates our talent to ensure quality
+              </p>
+              <img
+                class="card-section__card-item__icon"
+                src="./images/icon-karma.svg"
+                alt="karma icon"
+              />
+            </div>
+          </li>
+        </span>
+        <li class="card-section__card-item blue">
+          <div class="line"></div>
+          <div class="card-section__card-item__content">
+            <h2>Calculator</h2>
+            <p class="card-section__card-item__description">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <img
+              class="card-section__card-item__icon"
+              src="./images/icon-calculator.svg"
+              alt="calculator icon"
+            />
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
